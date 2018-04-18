@@ -6,8 +6,13 @@ function loadout(pos)
     Citizen.CreateThread(function()
 		RemoveAllPedWeapons(ped)
 			for i,weap in pairs(LOADOUTS[pos.id].weapon) do
-				GiveWeaponToPed(ped, weap, 300, false)
+				GiveWeaponToPed(ped, weap, 1000, false)
+					for i,comp in pairs(LOADOUTS[pos.id].component) do
+						GiveWeaponComponentToPed(ped, weap, comp) --let's see what happens if you give a component to the wrong weapon... 
+				end
 			end
+			
+
 		--if (pos.id == 1) then -- Alexander
 		--	--defaults
 		--	GiveWeaponToPed(ped, 0x497FACC3, 300, false) --give flares
