@@ -6,8 +6,8 @@ WEAPONSHOPS = {
 }
 
 LOADOUTS = {
-	[1] = {id = 1, name = "Alexander"},
-    [2] = {id = 2, name = "Andrew"},
-    [3] = {id = 3, name = "Peter"},
-    [4] = {id = 4, name = "Zero"},
+	[1] = {id = 1, name = "1", weapon = {0x1B06D571, 0x7FD62962}}, -- pistol and combat MG
+    [2] = {id = 2, name = "2"},
+    [3] = {id = 3, name = "3"},
+    [4] = {id = 4, name = "4"},
 } 
