@@ -7,9 +7,14 @@ function loadout(pos)
 		RemoveAllPedWeapons(ped)
 			for i,weap in pairs(LOADOUTS[pos.id].weapon) do
 				GiveWeaponToPed(ped, weap, 1000, false)
-					for i,comp in pairs(LOADOUTS[pos.id].component) do
-						GiveWeaponComponentToPed(ped, weap, comp) --let's see what happens if you give a component to the wrong weapon... 
+				for i,component in  (COMPONENTS) do
+					if (component.weapon == weap && component.loadout=pos.id) then
+						GiveWeaponComponentToPed(ped, weap, component.id) 
+					end
 				end
+					-- for i,comp in pairs(LOADOUTS[pos.id].component) do    -- Gives the wrong component to some weapons
+					--	GiveWeaponComponentToPed(ped, weap, comp) 
+					--end
 			end
 			
 
